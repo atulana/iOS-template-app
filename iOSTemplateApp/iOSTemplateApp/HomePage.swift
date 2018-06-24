@@ -18,8 +18,11 @@ class HomePage: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate 
     @IBOutlet weak var bookingBtn: UIButton!
     @IBOutlet weak var accountBtn: UIButton!
     @IBOutlet weak var locSearchBtn: UIButton!
+    @IBOutlet weak var currentLocBtn: UIButton!
     
     let locationManager = CLLocationManager()
+    
+    //MARK:- Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -52,6 +55,21 @@ class HomePage: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate 
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK:- IBAction
+    @IBAction func placeBtnTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func bikeBtnTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func bookingBtnTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func accountBtnTapped(_ sender: UIButton) {
+        
+    }
+    
+    //MARK:- Custom Methods
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = manager.location?.coordinate
         centerMap(location!)
@@ -78,7 +96,7 @@ class HomePage: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate 
             dequeueView.annotation = annotation
             view = dequeueView
         }
-        else{
+        else {
             view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
@@ -89,7 +107,7 @@ class HomePage: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate 
     
     func setupHomePage()
     {
-
+        
     }
 }
 

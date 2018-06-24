@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		81429C0D20DF3B9B00F5264F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81429C0C20DF3B9B00F5264F /* MapKit.framework */; };
 		81429C0F20DF63B500F5264F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81429C0E20DF63B500F5264F /* CoreLocation.framework */; };
+		81DE933120DFF0DA0093AAC2 /* DiscoverBikesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE933020DFF0DA0093AAC2 /* DiscoverBikesVC.swift */; };
 		B7BD8E8020DE862100829E44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD8E7F20DE862100829E44 /* AppDelegate.swift */; };
 		B7BD8E8220DE862100829E44 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD8E8120DE862100829E44 /* HomePage.swift */; };
 		B7BD8E8520DE862100829E44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BD8E8320DE862100829E44 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		81429C0C20DF3B9B00F5264F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		81429C0E20DF63B500F5264F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		81DE932F20DFD45B0093AAC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81DE933020DFF0DA0093AAC2 /* DiscoverBikesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverBikesVC.swift; sourceTree = "<group>"; };
 		B7BD8E7C20DE862100829E44 /* iOSTemplateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTemplateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BD8E7F20DE862100829E44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7BD8E8120DE862100829E44 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				B7BD8E7F20DE862100829E44 /* AppDelegate.swift */,
 				B7BD8E8120DE862100829E44 /* HomePage.swift */,
+				81DE933020DFF0DA0093AAC2 /* DiscoverBikesVC.swift */,
 				B7BD8E8320DE862100829E44 /* Main.storyboard */,
 				B7BD8E8B20DE862200829E44 /* LaunchScreen.storyboard */,
 				B7BD8E8E20DE862200829E44 /* Info.plist */,
@@ -280,6 +283,7 @@
 			files = (
 				B7BD8E8820DE862100829E44 /* iOSTemplateApp.xcdatamodeld in Sources */,
 				B7BD8E8220DE862100829E44 /* HomePage.swift in Sources */,
+				81DE933120DFF0DA0093AAC2 /* DiscoverBikesVC.swift in Sources */,
 				B7BD8E8020DE862100829E44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
