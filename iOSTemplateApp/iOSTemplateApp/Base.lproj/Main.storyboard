@@ -1,24 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomePage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="homePage" title="HomePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomePage" customModule="iOSTemplateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="ContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XD6-cJ-gKf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSZ-3P-aKk" userLabel="BottomMenuView">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="JgD-eN-lpB" userLabel="MenuContainerStackView">
+                                        <rect key="frame" x="12.5" y="0.0" width="350" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q65-C7-IUO" userLabel="PlacesBtn">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <inset key="titleEdgeInsets" minX="50" minY="30" maxX="45" maxY="10"/>
+                                                <inset key="imageEdgeInsets" minX="10" minY="7.5" maxX="0.0" maxY="27.5"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="Places" image="placesIcon">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eT1-gq-qFq" userLabel="BikesBtn">
+                                                <rect key="frame" x="100" y="0.0" width="50" height="60"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <inset key="titleEdgeInsets" minX="50" minY="30" maxX="50" maxY="10"/>
+                                                <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="20"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="   Bikes" image="bikeSmallIcon">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwM-xo-jZu" userLabel="BookingBtn">
+                                                <rect key="frame" x="200" y="0.0" width="50" height="60"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <inset key="titleEdgeInsets" minX="50" minY="30" maxX="50" maxY="10"/>
+                                                <inset key="imageEdgeInsets" minX="15" minY="10" maxX="15" maxY="30"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="Booking" image="bookingIcon">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QI-hj-3GG" userLabel="AccountBtn">
+                                                <rect key="frame" x="300" y="0.0" width="50" height="60"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                <inset key="titleEdgeInsets" minX="50" minY="30" maxX="50" maxY="10"/>
+                                                <inset key="imageEdgeInsets" minX="15" minY="10" maxX="15" maxY="30"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="Account" image="accIcon">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="IaM-vA-6AN"/>
+                                            <constraint firstItem="Q65-C7-IUO" firstAttribute="width" secondItem="1QI-hj-3GG" secondAttribute="width" id="PdW-Rz-20V"/>
+                                            <constraint firstItem="Q65-C7-IUO" firstAttribute="width" secondItem="VwM-xo-jZu" secondAttribute="width" id="QGc-cd-POq"/>
+                                            <constraint firstItem="Q65-C7-IUO" firstAttribute="width" secondItem="eT1-gq-qFq" secondAttribute="width" id="RGd-4x-OvG"/>
+                                            <constraint firstAttribute="width" constant="350" id="l3d-Lq-YXO"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="JgD-eN-lpB" firstAttribute="centerY" secondItem="JSZ-3P-aKk" secondAttribute="centerY" id="91X-7D-Oa9"/>
+                                    <constraint firstAttribute="height" constant="60" id="UFt-Kt-yhg"/>
+                                    <constraint firstItem="JgD-eN-lpB" firstAttribute="centerX" secondItem="JSZ-3P-aKk" secondAttribute="centerX" id="XCo-cm-Wi0"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="07c-lc-KTA">
+                                <rect key="frame" x="31" y="34" width="312" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxC-wG-F80">
+                                        <rect key="frame" x="0.0" y="0.0" width="246" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Search location">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQm-Bp-ajA">
+                                        <rect key="frame" x="266" y="0.0" width="46" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="FvJ-GS-Pxa"/>
+                                        </constraints>
+                                        <state key="normal" image="SearchIcon"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="HoN-aL-LFR"/>
+                                    <constraint firstAttribute="height" constant="44" id="I2d-hh-L0i"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JSZ-3P-aKk" secondAttribute="bottom" id="GWN-iF-KCx"/>
+                            <constraint firstItem="07c-lc-KTA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="HTb-CW-Nfd"/>
+                            <constraint firstItem="XD6-cJ-gKf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LLe-Yr-Xga"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JSZ-3P-aKk" secondAttribute="trailing" id="MGu-Qj-wXi"/>
+                            <constraint firstItem="JSZ-3P-aKk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WnD-RH-f0C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="XD6-cJ-gKf" secondAttribute="top" constant="20" id="cw8-T6-Xs2"/>
+                            <constraint firstItem="JSZ-3P-aKk" firstAttribute="top" secondItem="XD6-cJ-gKf" secondAttribute="bottom" id="wjy-tY-xoB"/>
+                            <constraint firstItem="07c-lc-KTA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xpX-Z8-8ig"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XD6-cJ-gKf" secondAttribute="trailing" id="ySo-kS-wN8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="accountBtn" destination="1QI-hj-3GG" id="jsh-Io-rbb"/>
+                        <outlet property="bikeBtn" destination="eT1-gq-qFq" id="xB7-N6-r5R"/>
+                        <outlet property="bookingBtn" destination="VwM-xo-jZu" id="2SL-nj-4Ba"/>
+                        <outlet property="locSearchBtn" destination="IxC-wG-F80" id="qAS-FV-mes"/>
+                        <outlet property="mapView" destination="XD6-cJ-gKf" id="JII-AH-qA6"/>
+                        <outlet property="placeBtn" destination="Q65-C7-IUO" id="d98-ZC-IDw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SearchIcon" width="40" height="40"/>
+        <image name="accIcon" width="30" height="30"/>
+        <image name="bikeSmallIcon" width="30" height="30"/>
+        <image name="bookingIcon" width="30" height="30"/>
+        <image name="placesIcon" width="30" height="30"/>
+    </resources>
 </document>

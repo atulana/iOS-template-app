@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81429C0D20DF3B9B00F5264F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81429C0C20DF3B9B00F5264F /* MapKit.framework */; };
+		81429C0F20DF63B500F5264F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81429C0E20DF63B500F5264F /* CoreLocation.framework */; };
 		B7BD8E8020DE862100829E44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD8E7F20DE862100829E44 /* AppDelegate.swift */; };
-		B7BD8E8220DE862100829E44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD8E8120DE862100829E44 /* ViewController.swift */; };
+		B7BD8E8220DE862100829E44 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD8E8120DE862100829E44 /* HomePage.swift */; };
 		B7BD8E8520DE862100829E44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BD8E8320DE862100829E44 /* Main.storyboard */; };
 		B7BD8E8820DE862100829E44 /* iOSTemplateApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7BD8E8620DE862100829E44 /* iOSTemplateApp.xcdatamodeld */; };
-		B7BD8E8A20DE862200829E44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BD8E8920DE862200829E44 /* Assets.xcassets */; };
 		B7BD8E8D20DE862200829E44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BD8E8B20DE862200829E44 /* LaunchScreen.storyboard */; };
 		B7BD8E9820DE862200829E44 /* iOSTemplateAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD8E9720DE862200829E44 /* iOSTemplateAppTests.swift */; };
 		B7BD8EA320DE862200829E44 /* iOSTemplateAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BD8EA220DE862200829E44 /* iOSTemplateAppUITests.swift */; };
@@ -35,12 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81429C0C20DF3B9B00F5264F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		81429C0E20DF63B500F5264F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		81DE932F20DFD45B0093AAC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7BD8E7C20DE862100829E44 /* iOSTemplateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTemplateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BD8E7F20DE862100829E44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7BD8E8120DE862100829E44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7BD8E8120DE862100829E44 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		B7BD8E8420DE862100829E44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7BD8E8720DE862100829E44 /* iOSTemplateApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSTemplateApp.xcdatamodel; sourceTree = "<group>"; };
-		B7BD8E8920DE862200829E44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7BD8E8C20DE862200829E44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7BD8E8E20DE862200829E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7BD8E9320DE862200829E44 /* iOSTemplateAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTemplateAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81429C0F20DF63B500F5264F /* CoreLocation.framework in Frameworks */,
+				81429C0D20DF3B9B00F5264F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81429C0B20DF3B9B00F5264F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81429C0E20DF63B500F5264F /* CoreLocation.framework */,
+				81429C0C20DF3B9B00F5264F /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B7BD8E7320DE862100829E44 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,7 @@
 				B7BD8E9620DE862200829E44 /* iOSTemplateAppTests */,
 				B7BD8EA120DE862200829E44 /* iOSTemplateAppUITests */,
 				B7BD8E7D20DE862100829E44 /* Products */,
+				81429C0B20DF3B9B00F5264F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,11 +115,11 @@
 			isa = PBXGroup;
 			children = (
 				B7BD8E7F20DE862100829E44 /* AppDelegate.swift */,
-				B7BD8E8120DE862100829E44 /* ViewController.swift */,
+				B7BD8E8120DE862100829E44 /* HomePage.swift */,
 				B7BD8E8320DE862100829E44 /* Main.storyboard */,
-				B7BD8E8920DE862200829E44 /* Assets.xcassets */,
 				B7BD8E8B20DE862200829E44 /* LaunchScreen.storyboard */,
 				B7BD8E8E20DE862200829E44 /* Info.plist */,
+				81DE932F20DFD45B0093AAC2 /* Assets.xcassets */,
 				B7BD8E8620DE862100829E44 /* iOSTemplateApp.xcdatamodeld */,
 			);
 			path = iOSTemplateApp;
@@ -196,6 +211,11 @@
 				TargetAttributes = {
 					B7BD8E7B20DE862100829E44 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B7BD8E9220DE862200829E44 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -233,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7BD8E8D20DE862200829E44 /* LaunchScreen.storyboard in Resources */,
-				B7BD8E8A20DE862200829E44 /* Assets.xcassets in Resources */,
 				B7BD8E8520DE862100829E44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7BD8E8820DE862100829E44 /* iOSTemplateApp.xcdatamodeld in Sources */,
-				B7BD8E8220DE862100829E44 /* ViewController.swift in Sources */,
+				B7BD8E8220DE862100829E44 /* HomePage.swift in Sources */,
 				B7BD8E8020DE862100829E44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
