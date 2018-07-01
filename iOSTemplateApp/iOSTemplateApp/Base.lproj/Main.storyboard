@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +13,7 @@
         <!--HomePage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="homePage" title="HomePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomePage" customModule="iOSTemplateApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePage" autoresizesArchivedViewToFullSize="NO" title="HomePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomePage" customModule="iOSTemplateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="ContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,29 +180,33 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="58"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Pick Up Date , Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWC-ME-XHp">
-                                                                <rect key="frame" x="0.0" y="0.5" width="335" height="17.5"/>
+                                                                <rect key="frame" x="0.0" y="10.5" width="335" height="17.5"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Friday, 24 June 2018 09:00:00" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gBw-qI-zYU">
-                                                                <rect key="frame" x="0.0" y="18" width="335" height="40"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMG-Wn-OKB">
+                                                                <rect key="frame" x="0.0" y="28" width="335" height="30"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="2ib-ed-KZR"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="N1C-hB-xg0"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                <state key="normal">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="selectPickDateBtnTapped:" destination="XkJ-2x-CvO" eventType="touchUpInside" id="2e4-bh-VJ5"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="gBw-qI-zYU" secondAttribute="trailing" id="F92-uJ-Dbc"/>
+                                                            <constraint firstItem="TMG-Wn-OKB" firstAttribute="top" secondItem="iWC-ME-XHp" secondAttribute="bottom" id="A9u-qy-a6s"/>
                                                             <constraint firstAttribute="trailing" secondItem="iWC-ME-XHp" secondAttribute="trailing" id="LVF-89-dob"/>
-                                                            <constraint firstItem="gBw-qI-zYU" firstAttribute="top" secondItem="iWC-ME-XHp" secondAttribute="bottom" id="OyM-lp-jhg"/>
+                                                            <constraint firstAttribute="bottom" secondItem="TMG-Wn-OKB" secondAttribute="bottom" id="RxJ-ak-ilk"/>
                                                             <constraint firstItem="iWC-ME-XHp" firstAttribute="leading" secondItem="3E7-2D-dP2" secondAttribute="leading" id="Wav-Ga-MOY"/>
-                                                            <constraint firstItem="gBw-qI-zYU" firstAttribute="leading" secondItem="3E7-2D-dP2" secondAttribute="leading" id="X4A-I0-qCm"/>
-                                                            <constraint firstAttribute="bottom" secondItem="gBw-qI-zYU" secondAttribute="bottom" id="pkN-RS-FWg"/>
+                                                            <constraint firstAttribute="trailing" secondItem="TMG-Wn-OKB" secondAttribute="trailing" id="Wzl-yG-YO0"/>
+                                                            <constraint firstItem="TMG-Wn-OKB" firstAttribute="leading" secondItem="3E7-2D-dP2" secondAttribute="leading" id="fdF-DB-6TT"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crL-Ma-q3N">
@@ -221,24 +224,28 @@
                                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="12 Hours" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0d5-HY-JK2">
-                                                                                <rect key="frame" x="0.0" y="18" width="154.5" height="40"/>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bx-z6-GwZ">
+                                                                                <rect key="frame" x="0.0" y="18" width="162.5" height="40"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="40" id="SJJ-eZ-5AI"/>
+                                                                                    <constraint firstAttribute="height" constant="40" id="fsL-B1-4MZ"/>
                                                                                 </constraints>
-                                                                                <nil key="textColor"/>
-                                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                                                                <textInputTraits key="textInputTraits"/>
-                                                                            </textField>
+                                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                                <state key="normal">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="selectDurationBtnTapped:" destination="XkJ-2x-CvO" eventType="touchUpInside" id="Si4-pi-ifK"/>
+                                                                                </connections>
+                                                                            </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstItem="0d5-HY-JK2" firstAttribute="leading" secondItem="VJZ-6i-Uix" secondAttribute="leading" id="6mk-eT-wjg"/>
-                                                                            <constraint firstAttribute="trailingMargin" secondItem="0d5-HY-JK2" secondAttribute="trailing" id="BIJ-Nl-Lge"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="5bx-z6-GwZ" secondAttribute="bottom" id="82e-kn-ATT"/>
                                                                             <constraint firstItem="eDT-TJ-Q2x" firstAttribute="leading" secondItem="VJZ-6i-Uix" secondAttribute="leading" id="DpL-pj-cFZ"/>
+                                                                            <constraint firstItem="5bx-z6-GwZ" firstAttribute="leading" secondItem="VJZ-6i-Uix" secondAttribute="leading" id="ad9-nq-lY1"/>
                                                                             <constraint firstAttribute="trailing" secondItem="eDT-TJ-Q2x" secondAttribute="trailing" id="d1v-Kk-lPX"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="0d5-HY-JK2" secondAttribute="bottom" id="lqo-9e-eGh"/>
-                                                                            <constraint firstItem="0d5-HY-JK2" firstAttribute="top" secondItem="eDT-TJ-Q2x" secondAttribute="bottom" id="mum-NE-3tm"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="5bx-z6-GwZ" secondAttribute="trailing" id="dGj-q7-m4V"/>
+                                                                            <constraint firstItem="5bx-z6-GwZ" firstAttribute="top" secondItem="eDT-TJ-Q2x" secondAttribute="bottom" id="dnS-FH-Itq"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOq-E9-Sq8">
@@ -250,24 +257,28 @@
                                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="STc-fK-LrH">
-                                                                                <rect key="frame" x="0.0" y="18" width="154.5" height="40"/>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czj-FU-0yF">
+                                                                                <rect key="frame" x="0.0" y="18" width="162.5" height="40"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="40" id="6Ua-bz-uLD"/>
+                                                                                    <constraint firstAttribute="height" constant="40" id="36c-9N-hka"/>
                                                                                 </constraints>
-                                                                                <nil key="textColor"/>
-                                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                                                                <textInputTraits key="textInputTraits"/>
-                                                                            </textField>
+                                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                                <state key="normal">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="selectNoOfBikesBtnTapped:" destination="XkJ-2x-CvO" eventType="touchUpInside" id="vpa-8e-soF"/>
+                                                                                </connections>
+                                                                            </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="bottom" secondItem="STc-fK-LrH" secondAttribute="bottom" id="Q7U-CY-0qe"/>
-                                                                            <constraint firstItem="STc-fK-LrH" firstAttribute="leading" secondItem="kOq-E9-Sq8" secondAttribute="leading" id="bem-wN-0mV"/>
+                                                                            <constraint firstItem="Czj-FU-0yF" firstAttribute="leading" secondItem="kOq-E9-Sq8" secondAttribute="leading" id="HJQ-Fa-GBO"/>
+                                                                            <constraint firstItem="Czj-FU-0yF" firstAttribute="top" secondItem="eMz-CQ-XoK" secondAttribute="bottom" id="cPF-cU-Caw"/>
                                                                             <constraint firstItem="eMz-CQ-XoK" firstAttribute="leading" secondItem="kOq-E9-Sq8" secondAttribute="leading" id="jlb-8U-g7L"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="Czj-FU-0yF" secondAttribute="trailing" id="k8H-m7-1tg"/>
                                                                             <constraint firstAttribute="trailing" secondItem="eMz-CQ-XoK" secondAttribute="trailing" id="nC9-kp-2xW"/>
-                                                                            <constraint firstAttribute="trailingMargin" secondItem="STc-fK-LrH" secondAttribute="trailing" id="nZI-gx-Iz7"/>
-                                                                            <constraint firstItem="STc-fK-LrH" firstAttribute="top" secondItem="eMz-CQ-XoK" secondAttribute="bottom" id="uaz-Qa-h7F"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="Czj-FU-0yF" secondAttribute="bottom" id="oj8-fG-1rW"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
@@ -295,7 +306,10 @@
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="30" id="HQf-Em-uql"/>
                                                                         </constraints>
-                                                                        <state key="normal" image="SearchIcon"/>
+                                                                        <state key="normal" image="checkbox-icon"/>
+                                                                        <connections>
+                                                                            <action selector="searchWithGearsOptionTapped:" destination="XkJ-2x-CvO" eventType="touchUpInside" id="WGa-pv-oWw"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only show bikes with riding gears" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4L-IA-mUG">
                                                                         <rect key="frame" x="35" y="0.0" width="300.5" height="30"/>
@@ -368,6 +382,9 @@
                                                                                     <constraint firstAttribute="width" constant="30" id="dRO-6I-jbK"/>
                                                                                 </constraints>
                                                                                 <state key="normal" image="SearchIcon"/>
+                                                                                <connections>
+                                                                                    <action selector="roadOptionBtnTapped:" destination="XkJ-2x-CvO" eventType="touchUpInside" id="dcz-kk-dBh"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Road" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qA-tI-Uwq">
                                                                                 <rect key="frame" x="50" y="13" width="36" height="17.5"/>
@@ -394,6 +411,9 @@
                                                                                     <constraint firstAttribute="height" constant="30" id="iTY-V0-frn"/>
                                                                                 </constraints>
                                                                                 <state key="normal" image="SearchIcon"/>
+                                                                                <connections>
+                                                                                    <action selector="mountianOptionBtnTapped:" destination="XkJ-2x-CvO" eventType="touchUpInside" id="DTf-l2-IlE"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mountian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1L-d8-0wl">
                                                                                 <rect key="frame" x="50" y="13" width="63" height="17.5"/>
@@ -440,6 +460,9 @@
                                                                                     <constraint firstAttribute="height" constant="30" id="of9-SU-UWj"/>
                                                                                 </constraints>
                                                                                 <state key="normal" image="SearchIcon"/>
+                                                                                <connections>
+                                                                                    <action selector="crossCountryOptionTapped:" destination="XkJ-2x-CvO" eventType="touchUpInside" id="xqO-u6-UAW"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cross Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FS5-xX-J8V">
                                                                                 <rect key="frame" x="50" y="13" width="97" height="17.5"/>
@@ -466,6 +489,9 @@
                                                                                     <constraint firstAttribute="height" constant="30" id="qGM-eV-zod"/>
                                                                                 </constraints>
                                                                                 <state key="normal" title="Button" image="SearchIcon"/>
+                                                                                <connections>
+                                                                                    <action selector="bmxOptionTapped:" destination="XkJ-2x-CvO" eventType="touchUpInside" id="feF-EC-Sxq"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGM-56-aev">
                                                                                 <rect key="frame" x="50" y="13" width="33" height="17.5"/>
@@ -526,15 +552,72 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <datePicker hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dYj-BE-ExB">
+                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="ZeD-k1-XIu"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="551636466.23082995">
+                                    <!--2018-06-25 16:21:06 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateChanged:" destination="XkJ-2x-CvO" eventType="valueChanged" id="KQj-eh-Fyr"/>
+                                </connections>
+                            </datePicker>
+                            <pickerView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="durationPicker" translatesAutoresizingMaskIntoConstraints="NO" id="L3C-xO-YYY">
+                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="qRE-Mf-fkD"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="XkJ-2x-CvO" id="PFI-Gz-kVC"/>
+                                    <outlet property="delegate" destination="XkJ-2x-CvO" id="Cvv-e2-B2F"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="bikesPicker" translatesAutoresizingMaskIntoConstraints="NO" id="jEy-IV-OFL">
+                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="PWb-45-GhN"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="XkJ-2x-CvO" id="GK1-HP-IAf"/>
+                                    <outlet property="delegate" destination="XkJ-2x-CvO" id="Grt-XL-lXg"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bYf-dY-mWa" firstAttribute="trailing" secondItem="dYj-BE-ExB" secondAttribute="trailing" id="0Jb-Cj-X7j"/>
+                            <constraint firstItem="bYf-dY-mWa" firstAttribute="leading" secondItem="dYj-BE-ExB" secondAttribute="leading" id="1xx-q6-aQj"/>
+                            <constraint firstItem="bYf-dY-mWa" firstAttribute="bottom" secondItem="dYj-BE-ExB" secondAttribute="bottom" id="9FW-uS-blf"/>
+                            <constraint firstItem="bYf-dY-mWa" firstAttribute="bottom" secondItem="jEy-IV-OFL" secondAttribute="bottom" id="QGT-A3-cSh"/>
+                            <constraint firstItem="bYf-dY-mWa" firstAttribute="trailing" secondItem="jEy-IV-OFL" secondAttribute="trailing" id="SyV-o3-LNj"/>
+                            <constraint firstItem="L3C-xO-YYY" firstAttribute="leading" secondItem="bYf-dY-mWa" secondAttribute="leading" id="bCU-pq-8nh"/>
                             <constraint firstItem="nS2-S5-qyp" firstAttribute="top" secondItem="bYf-dY-mWa" secondAttribute="top" constant="60" id="hI1-rk-hE9"/>
+                            <constraint firstItem="bYf-dY-mWa" firstAttribute="trailing" secondItem="L3C-xO-YYY" secondAttribute="trailing" id="oAl-9U-a8B"/>
                             <constraint firstItem="bYf-dY-mWa" firstAttribute="trailing" secondItem="nS2-S5-qyp" secondAttribute="trailing" constant="10" id="vDi-3B-fmm"/>
+                            <constraint firstItem="jEy-IV-OFL" firstAttribute="leading" secondItem="bYf-dY-mWa" secondAttribute="leading" id="vQk-vp-uH7"/>
                             <constraint firstItem="nS2-S5-qyp" firstAttribute="leading" secondItem="bYf-dY-mWa" secondAttribute="leading" constant="10" id="zWo-tp-oQF"/>
+                            <constraint firstItem="bYf-dY-mWa" firstAttribute="bottom" secondItem="L3C-xO-YYY" secondAttribute="bottom" id="zjI-JY-MVe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bYf-dY-mWa"/>
                     </view>
+                    <connections>
+                        <outlet property="bmxOptionBtn" destination="Rhi-ZY-TDN" id="HZ7-ei-tfI"/>
+                        <outlet property="crossCountryOptionBtn" destination="vgg-ma-W5j" id="sAA-5Q-mFi"/>
+                        <outlet property="datePickerView" destination="dYj-BE-ExB" id="Tde-zT-WQP"/>
+                        <outlet property="durationPicker" destination="L3C-xO-YYY" id="dPX-CG-xyM"/>
+                        <outlet property="mountianOptionBtn" destination="hVK-t0-G7c" id="JVh-aF-7Yv"/>
+                        <outlet property="noOfBikesPicker" destination="jEy-IV-OFL" id="gbe-xc-STl"/>
+                        <outlet property="optionWithRidingGearsBtn" destination="Hhy-xS-ATe" id="82f-BO-hsz"/>
+                        <outlet property="roadOptionBtn" destination="TFT-v2-Ovv" id="Ndk-VF-T86"/>
+                        <outlet property="selectBikeLbl" destination="eMz-CQ-XoK" id="wiq-IP-wyb"/>
+                        <outlet property="selectDateLbl" destination="iWC-ME-XHp" id="yXM-4Y-QqO"/>
+                        <outlet property="selectDurationBtn" destination="5bx-z6-GwZ" id="yBG-YM-thB"/>
+                        <outlet property="selectDurationLbl" destination="eDT-TJ-Q2x" id="3Pq-4m-Est"/>
+                        <outlet property="selectNoOfBikesBtn" destination="Czj-FU-0yF" id="2eT-zz-aVg"/>
+                        <outlet property="selectPickDateBtn" destination="TMG-Wn-OKB" id="aJM-gn-zNq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bf-Y9-RTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -546,6 +629,7 @@
         <image name="accIcon" width="30" height="30"/>
         <image name="bikeSmallIcon" width="30" height="30"/>
         <image name="bookingIcon" width="30" height="30"/>
+        <image name="checkbox-icon" width="30" height="30"/>
         <image name="placesIcon" width="30" height="30"/>
     </resources>
 </document>
